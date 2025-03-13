@@ -79,40 +79,51 @@
             transition-delay: .3s;
             transition: all .3s ease;
         }
-
-        .description p {
-            color: black;
-            padding-top: 5px;
-        }
-
-        .description h4 {
-            text-transform: uppercase;
-        }
-
+      
         input {
-            display: none;
+          display: none;
         }
 
         input:checked + label {
-            width: 600px;
+          width: 600px;
         }
 
         input:checked + label .description {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+      
+        /* Made changes to elements below */
+        .description p {
+          color: black;
+          padding-top: 5px;
         }
 
-        .card[for="c1"] {
-            /* background-image: ;*/
+        .description h4 {
+          text-transform: uppercase;
+          text-shadow: 0px 0px 10px black; 
         }
+      
+        .card[for="c1"] {
+          background-image: url('GDprj_Mag_preview.png');
+          background-repeat: no-repeat;
+          background-position: 0% 85%;
+        }
+      
         .card[for="c2"] {
-            /* background-image: ;*/
+          background-image: url('GDprj_Website_preview.png');
+          background-repeat: no-repeat;
+          background-position: 0% 0%;
         }
         .card[for="c3"] {
-            /* background-image: ;*/
+          background-image: url('GDprj-Icon-preview.png');
+          background-repeat: no-repeat;
+          background-position: 0% 50%;
         }
         .card[for="c4"] {
-            /* background-image: ;*/
+          background-image: url('DGprj_Brand_preview.jpg');
+          background-repeat: no-repeat;
+          background-position: 10% 0%;
         }
       
       .button{
