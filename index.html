@@ -1,85 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Flex Cards</title>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Catherine - Portfolio</title>
 
-    <style>
+      <!-- Poppins Header Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <!-- Gelasio Body Font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <style>
+        .page{
+          width: 1200px;
+          margin: auto;
+          font-family: "Gelasio", serif;
+        }
+
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-family: "Gelasio", serif;
         }
-
+        
         body {
-            background-color: #eeeeea;
+          background-color: #2c2c35;
         }
-      
+
         a{
-          color: black;
+          color: #faf0e7;
+          text-decoration: none;
+          font-size: 14px;
+          background: #2c2c35;
+          border-radius: 50px;
+          text-align: center;
+          padding: 5px 15px;
+          width: fit-content;
+        }
+        
+        /* For Computing Projects Section */
+        .cp-wrapper {
+          padding: 10px 10%;
+        }
+        
+        #card-area{
+          padding: 50px 0;
+        }
+        
+        .box-area{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-gap: 40px;
+          margin-top: 50px;
+        }
+        
+        .box{
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+          color: #2c2c35;
+        }
+        
+        .box img{
+          width: 100%;
+          border-radius: 10px;
+          display: block;
+          transition: transform 0.5s;
+        }
+        
+        .overlay{
+          height: 0;
+          width: 100%;
+          background: linear-gradient(transparent, #de98e6 70%);
+          border-radius: 10px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0 40px;
+          text-align: center;
+          font-size: 14px;
+          transition: height 0.5s;
+        }
+        
+        .overlay h3{
+          font-weight: 500px;
+          margin-bottom: 5px;
+          margin-top: 80%;
+          font-family: "Poppins", sans-serif;
+          font-size: 24px;
+          letter-spacing: 2px;
+        }
+        
+        .boxLhover img{
+          transform: scale(1.2);
+        }
+        
+        .box:hover .overlay{
+          height: 100%;
+        }
+        
+        /* For Graphic Design Projects Section */
+        .gdp-wrapper {
+          width: 100%;
+          height: 1000px;
+          display: flex;
+          align-items: center;            
+          justify-content: center;
         }
 
-        .wrapper {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            height: 400px;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: start;
+        .gdp-container {
+          height: 400px;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: start;
         }
 
         .card {
-            width: 80px;
-            border-radius: .75rem;
-            background-size: cover;
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 2rem;
-            margin: 0 10px;
-            display: flex;
-            align-items: flex-end;
-            transition: .6s cubic-bezier(.28,-0.03,0,.99);
-            box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-        }
+          width: 80px;
+          border-radius: .75rem;
+          background-size: cover;
+          cursor: pointer;
+          overflow: hidden;           
+          border-radius: 2rem;
+          margin: 0 10px;              
+          display: flex;
+          align-items: flex-end;
+          transition: .6s cubic-bezier(.28,-0.03,0,.99);
+          box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+          }
 
         .card > .row {
-            color: white;
-            display: flex;
-            flex-wrap: nowrap;
+          color: #faf0e7;
+          display: flex;
+          flex-wrap: nowrap;
         }
 
         .card > .row > .icon {
-            background: #223;
-            color: white;
-            border-radius: 50%;
-            width: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 15px;
+          background: #de98e6;
+          font-family: "Poppins", sans-serif;
+          color: #faf0e7;
+          border-radius: 50%;
+          width: 50px;
+          display: flex;
+          justify-content: center;              
+          align-items: center;
+          margin: 15px;
         }
 
         .card > .row > .description {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            overflow: hidden;
-            height: 80px;
-            width: 520px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition-delay: .3s;
-            transition: all .3s ease;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          height: 80px;
+          width: 520px;
+          opacity: 0;
+          transform: translateY(30px);
+          transition-delay: .3s;
+          transition: all .3s ease;
         }
-      
+
         input {
           display: none;
         }
@@ -89,101 +181,140 @@
         }
 
         input:checked + label .description {
-          opacity: 1 !important;
+          opacity: 1 !important;            
           transform: translateY(0) !important;
         }
-      
+
         /* Made changes to elements below */
         .description p {
-          color: black;
+          font-family: "Gelasio", serif;
+          color: #2c2c35;
           padding-top: 5px;
-        }
-
+         }
+        
         .description h4 {
+          font-family: "Poppins", sans-serif;
           text-transform: uppercase;
-          text-shadow: 0px 0px 10px black; 
+          text-shadow: 0px 0px 10px #2c2c35;; 
         }
-      
+          
         .card[for="c1"] {
-          background-image: url('GDprj_Mag_preview.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,url('GDprj_Mag_preview.png');
           background-repeat: no-repeat;
           background-position: 0% 85%;
         }
-      
+
         .card[for="c2"] {
-          background-image: url('GDprj_Website_preview.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('GDprj_Website_preview.png');
           background-repeat: no-repeat;
           background-position: 0% 0%;
         }
         .card[for="c3"] {
-          background-image: url('GDprj-Icon-preview.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('GDprj-Icon-preview.png');
           background-repeat: no-repeat;
           background-position: 0% 50%;
         }
         .card[for="c4"] {
-          background-image: url('DGprj_Brand_preview.jpg');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('DGprj_Brand_preview.jpg');
           background-repeat: no-repeat;
           background-position: 10% 0%;
         }
-      
-      .button{
-          background-color: white; /* Green */
-          border: none;
-          padding: 5px 10px;
-          text-align: center;
-          text-decoration: none;
-          font-size: 16px;
-          width: fit-content;
-      }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="container">
+      </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="graphic-design-projects">
+        <div class="gdp-wrapper">
+          <div class="gdp-container">
+
+            <!-- Branding Porject -->
             <input type="radio" name="slide" id="c4">
             <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon">4</div>
-                    <div class="description">
-                        <h4>Party Anthem Concert - Event Branding</h4>
-                        <a class="button" href="insert link">View Project Details</a>
-                    </div>
+              <div class="row">
+                <div class="icon">4</div>
+                <div class="description">
+                  <h4>Party Anthem Concert - Event Branding</h4>                        
+                  <a href="insert link">View Project Details</a>
                 </div>
+              </div>
             </label>
 
-            <input type="radio" name="slide" id="c3">
+            <!-- Logo Project -->
+            <input type="radio" name="slide" id="c3">              
             <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>Roaring Twenties - Icon Set</h4>
-                        <a class="button" href="insert link">View Project Details</a>
-                    </div>
+              <div class="row">
+                <div class="icon">3</div>
+                <div class="description">
+                  <h4>Roaring Twenties - Icon Set</h4>                        
+                  <a href="insert link">View Project Details</a>
                 </div>
+              </div>
             </label>
 
+            <!-- Website Project -->
             <input type="radio" name="slide" id="c2">
             <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>Tina's Grill - Website Redesign</h4>
-                        <a class="button" href="insert link">View Project Details</a>
-                    </div>
+              <div class="row">
+                <div class="icon">2</div>
+                <div class="description">
+                  <h4>Tina's Grill - Website Redesign</h4>
+                  <a href="insert link">View Project Details</a>               
                 </div>
+              </div>
             </label>
-          
+
+            <!-- Magazine Project -->
             <input type="radio" name="slide" id="c1" checked>
             <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>Where's The Inspo? - Magazine</h4>
-                        <a class="button" href="insert link">View Project Details</a>
-                    </div>
+              <div class="row">
+                <div class="icon">1</div>
+                <div class="description">
+                  <h4>Where's The Inspo? - Magazine</h4>
+                  <a href="insert link">View Project Details</a>
                 </div>
+              </div>
             </label>
+          </div>
         </div>
+      </div>
+
+      <div class="computing-projects">
+        <div id="card-area">
+          <div class="cp-wrapper">
+            <!-- C# Project -->
+            <div class="box-area">
+              <div class="box">
+                <img src="preview-c.png" alt="">
+                <div class="overlay">
+                  <h3>C# Project</h3>
+                  <a href="#">Take to page</a>
+                </div>
+              </div>
+              
+              <!-- Python Project -->
+              <div class="box">
+                <img src="preview-python.png" alt="">
+                <div class="overlay">
+                  <h3>Python Project</h3>
+                  <a href="#">Take to page</a>
+                </div>
+              </div>
+                
+              <!-- Racket Project -->
+              <div class="box">
+                <img src="preview-racket.png" alt="">
+                <div class="overlay">
+                  <h3>Racket Project</h3>
+                  <a href="#">Take to page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+      </div>
     </div>
-</body>
+  </body>
 </html>
