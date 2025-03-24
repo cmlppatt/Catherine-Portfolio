@@ -121,14 +121,14 @@
         }
 
         .gdp-container {
-          height: 400px;
+          height: 500px;
           display: flex;
           flex-wrap: nowrap;
           justify-content: start;
         }
 
         .card {
-          width: 80px;
+          width: 100px;
           border-radius: .75rem;
           background-size: cover;
           cursor: pointer;
@@ -148,7 +148,7 @@
         }
 
         .card > .row > .icon {
-          background: #de98e6;
+          background: #2c2c35;
           font-family: "Poppins", sans-serif;
           color: #faf0e7;
           border-radius: 50%;
@@ -177,7 +177,7 @@
         }
 
         input:checked + label {
-          width: 600px;
+          width: 700px;
         }
 
         input:checked + label .description {
@@ -195,27 +195,23 @@
         .description h4 {
           font-family: "Poppins", sans-serif;
           text-transform: uppercase;
-          text-shadow: 0px 0px 10px #2c2c35;; 
+          text-shadow: 0px 0px 10px #2c2c35; 
         }
           
         .card[for="c1"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,url('GDprj_Mag_preview.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)) ,url('GDprj_Mag_preview.png');
           background-repeat: no-repeat;
           background-position: 0% 85%;
         }
 
         .card[for="c2"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('GDprj_Website_preview.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Website_preview.png');
           background-repeat: no-repeat;
           background-position: 0% 0%;
         }
+
         .card[for="c3"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('GDprj-Icon-preview.png');
-          background-repeat: no-repeat;
-          background-position: 0% 50%;
-        }
-        .card[for="c4"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('DGprj_Brand_preview.jpg');
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('DGprj_Brand_preview.jpg');
           background-repeat: no-repeat;
           background-position: 10% 0%;
         }
@@ -228,24 +224,12 @@
           <div class="gdp-container">
 
             <!-- Branding Porject -->
-            <input type="radio" name="slide" id="c4">
-            <label for="c4" class="card">
-              <div class="row">
-                <div class="icon">4</div>
-                <div class="description">
-                  <h4>Party Anthem Concert - Event Branding</h4>                        
-                  <a href="insert link">View Project Details</a>
-                </div>
-              </div>
-            </label>
-
-            <!-- Logo Project -->
-            <input type="radio" name="slide" id="c3">              
+            <input type="radio" name="slide" id="c3">
             <label for="c3" class="card">
               <div class="row">
                 <div class="icon">3</div>
                 <div class="description">
-                  <h4>Roaring Twenties - Icon Set</h4>                        
+                  <h4>Party Anthem Concert - Event Branding</h4>                        
                   <a href="insert link">View Project Details</a>
                 </div>
               </div>
