@@ -14,6 +14,46 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+      <!-- VT323 for font rotation page heading-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+      <!-- Berkshire Swash for font rotation page heading-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    
+      <!-- Prata for font rotation page heading-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&family=Prata&display=swap" rel="stylesheet">
+    
+      <!-- Audiowide for font rotation page heading-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
+
+      <!-- Pirata One for font rotation page heading-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
+
+      <!-- Leckerli One for font rotation page heading-->   
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+      <!-- Lexend for font rotation page heading-->   
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+      <!-- Instrument Serif for font rotation page heading-->   
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
       <style>
         .page{
@@ -254,7 +294,7 @@
           flex-shrink: 0;
           display: flex;
           gap: 70px;
-          animation: colourchange 2s steps(1) infinite;
+          animation: colour-change 2s steps(1) infinite;
         }
         
         .band-computing li{
@@ -265,7 +305,7 @@
           margin-left: -30px;
         }
         
-        @keyframes colourchange {
+        @keyframes colour-change {
           0% {
             background-color: #de98e6;
             color: #2c2c35;
@@ -286,16 +326,103 @@
           }
         }
         
-        h1{
+        h1 h2{
           margin: 100px 0px 20px 200px;
           font-family: "Poppins", sans-serif;
           color: #faf0e7;
           font-size: 48px;
         }
+        
+        .title-section h1{
+          font-size: 108px;
+          margin-top: 100px;
+          margin-left: 10%;
+        }
+        
+        .title-section h2{
+          margin-left: 10%;
+          font-size: 64px;
+        }
+        
+        #font-changing{
+          display: inline-block;
+          padding-left: -10px;
+          animation: font-change 2s  ease-in-out  infinite;
+          line-height: 1.2px;
+          font-size: 56px;
+          width: 310px;
+          text-align: center;
+          
+          
+        }
+        
+        @keyframes font-change {
+          0%, 100% {
+            color: #f9dc6f;
+            font-family: "Lexend", sans-serif;
+          }
+          
+          10%{
+            color: #f9dc6f;
+            font-family: "Poppins", sans-serif;
+          }
+          
+          20%{
+            color: #f9dc6f;
+            font-family: "Berkshire Swash", fantasy;
+          }
+          
+          30%{
+            color: #de98e6;
+            font-family: "Leckerli One", cursive;
+          }
+          
+          40%{
+            color: #f9dc6f;
+            font-family: "Audiowide", monospace;
+          }
+
+          50% {
+            color: #de98e6;
+            font-family: "VT323", monospace;
+          }
+          
+          60%{
+            color: #faf0e7;
+            font-family: "Pirata One", fantasy;
+          }
+          
+          70%{
+            color: #faf0e7;
+            font-family: "Prata", serif;
+          }
+          
+          80%{
+            color: #de98e6;
+            font-family: "Gelasio", serif;
+          }
+          
+          90%{
+            color: #faf0e7;
+            font-family: "Instrument Serif", serif;
+          }
+        }
+        
       </style>
   </head>
   <body>
     <div class="page">
+      <div class="title-section">
+        <h1>Hey!</h1>
+        <h2>
+          I'm
+          <div id="font-changing">
+            Catherine
+          </div>
+          by the way
+        </h2>
+        
+      </div>
       <div class="graphic-design-projects">
         <div class="scrolling-band">
           <ul>
