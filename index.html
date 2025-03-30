@@ -30,10 +30,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&family=Prata&display=swap" rel="stylesheet">
     
-    <!-- Audiowide for font rotation page heading-->
+    <!-- Workbench for font rotation page heading-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
 
     <!-- Pirata One for font rotation page heading-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -330,39 +330,16 @@
         color: #faf0e7;
         font-size: 48px;
       }
-      
-      .title-section{
-        height: 1000px;
-        width: 1200px;
-        margin: auto;
-      }
-      
-      .text{
-        float: left;
-        position: absolute;
-        z-index: 4;
-        top: 275px;
-      }
-        
-      .title-section h1{
-        font-size: 108px;
-        margin-top: 100px;
-        margin-left: 10%;
-      }
-        
-      .title-section h2{
-        margin-left: 10%;
-        font-size: 64px;
-      }
         
       #font-changing{
-        display: inline-block;
-        padding-left: -10px;
         animation: font-change 2s  ease-in-out  infinite;
         line-height: 1.2px;
-        font-size: 56px;
+        font-size: 70px;
         width: 310px;
-        text-align: center;
+        position: absolute;
+        z-index: 1;
+        left: 50px;
+        top: 550px;
       }
         
       @keyframes font-change {
@@ -388,7 +365,7 @@
           
         40%{
           color: #f9dc6f;
-          font-family: "Audiowide", monospace;
+          font-family: "Workbench", monospace;
         }
 
         50% {
@@ -498,9 +475,9 @@
       }
       
       #epic-goose{
-        width: 1100px;
-        left: 145px;
-        top: 100px;
+        width: 1300px;
+        left: -40px;
+        top: 105px;
         position: relative;
       }
       
@@ -514,7 +491,48 @@
         z-index: 2;
         margin-top: 100px;
       }
+      
+      .text{
+        float: left;
+        position: absolute;
+        color: #faf0e7;
+        z-index: 4;
+        top: 40px;
+        left: 125px;
+      }
+      
+      .title-section{
+        height: 1000px;
+        width: 1200px;
+        margin: auto;
+      }
         
+      .title-section h1{
+        font-family: "Poppins", sans-serif;
+        font-size: 148px;
+        margin-top: 100px;
+        margin-left: 40px;
+      }
+        
+      .title-section h2{
+        font-family: "Poppins", sans-serif;
+        margin-left: 50px;
+        font-size: 24px;
+        line-height: 120px;
+      }
+      
+      .title-section h3{
+        margin-left: 65px;
+        font-size: 18px;
+      }
+      
+      #first-line-tag{
+        margin-top: -10px;
+      }
+      
+      #first-line-name{
+        padding-top: 75px;
+      }
       </style>
   </head>
   <body>
@@ -523,12 +541,14 @@
         <div id="frame"></div>
         <div class="text">
           <h1>Hey!</h1>
+          <h3 id="first-line-tag">What, the massive goose?</h3>
+          <h3>Don't worry about it!</h3>
+          <h2 id="first-line-name">( I'm</h2>
+          <div id="font-changing">
+            Catherine
+          </div>
           <h2>
-            I'm
-            <div id="font-changing">
-              Catherine
-            </div>
-            by the way
+            by the way )
           </h2>
         </div>
         <img id="epic-goose" src="goose.gif" alt="Huge epic canadian goose with cowboy hat, and ruff around its neck. Inside of its mouth is divded into a bunch of small triangles which change colours">
