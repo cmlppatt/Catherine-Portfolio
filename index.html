@@ -1,414 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Catherine - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine - Portfolio</title>
 
-      <!-- Poppins Header Font -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Poppins Header Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-      <!-- Gelasio Body Font-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Gelasio Body Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-      <!-- VT323 for font rotation page heading-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- VT323 for font rotation page heading-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
-      <!-- Berkshire Swash for font rotation page heading-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <!-- Berkshire Swash for font rotation page heading-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>      
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     
-      <!-- Prata for font rotation page heading-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&family=Prata&display=swap" rel="stylesheet">
+    <!-- Prata for font rotation page heading-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&family=Prata&display=swap" rel="stylesheet">
     
-      <!-- Audiowide for font rotation page heading-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Audiowide for font rotation page heading-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
 
-      <!-- Pirata One for font rotation page heading-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Pirata One for font rotation page heading-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>      
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&family=Pirata+One&display=swap" rel="stylesheet">
 
-      <!-- Leckerli One for font rotation page heading-->   
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Leckerli One for font rotation page heading-->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Leckerli+One&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     
-      <!-- Lexend for font rotation page heading-->   
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Lexend for font rotation page heading-->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     
-      <!-- Instrument Serif for font rotation page heading-->   
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Instrument Serif for font rotation page heading-->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-      <style>
-        .page{
-          margin: auto;
-          font-family: "Gelasio", serif;
-        }
+    <style>
+      .page{
+        margin: auto;
+        font-family: "Gelasio", serif;
+      }
 
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-          font-family: "Gelasio", serif;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Gelasio", serif;
+      }
         
-        body {
-          background-color: #2c2c35;
-        }
+      body {
+        background-color: #2c2c35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        a{
-          color: #faf0e7;
-          text-decoration: none;
-          font-size: 16px;
-          background: #2c2c35;
-          border-radius: 50px;
-          text-align: center;
-          padding: 5px 15px;
-          width: fit-content;
-        }
+      a{
+        color: #faf0e7;
+        text-decoration: none;
+        font-size: 16px;
+        background: #2c2c35;
+        border-radius: 50px;
+        text-align: center;
+        padding: 5px 15px;
+        width: fit-content;
+      }
         
-        /* For Computing Projects Section */
-        .cp-wrapper {
-          padding: 10px 10%;
-        }
+      /* For Computing Projects Section */
+      
+      .cp-projects{
+        margin: auto;
+        width: 1200px;
+      }
         
-        #card-area{
-          padding: 20px 0;
-        }
+      #card-area{
+        padding: 20px 0;
+      }
         
-        .box{
-          border-radius: 10px;
-          position: relative;
-          overflow: hidden;
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      .box{
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        color: #2c2c35;
+      }
+        
+      .box img{
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+      }
+        
+      .overlay{
+        height: 0;
+        width: 100%;
+        background: linear-gradient(transparent, #de98e6 70%);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.5s;
+      }
+        
+      .overlay h3{
+        font-weight: 500px;
+        margin-bottom: 5px;
+        margin-top: 80%;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+        
+      .boxLhover img{
+        transform: scale(1.2);
+      }
+        
+      .box:hover .overlay{
+        height: 100%;
+      }
+        
+      /* For Graphic Design Projects Section */
+      .gdp-wrapper {
+        display: flex;
+        align-items: center;            
+        justify-content: center;
+        height: 500px;
+        display: flex;
+      }
+
+      .card {
+        width: 100px;
+        height: 400px;
+        border-radius: .75rem;
+        background-size: cover;
+        cursor: pointer;
+        overflow: hidden;           
+        border-radius: 2rem;
+        margin: 0 10px;              
+        display: flex;
+        align-items: flex-end;
+        transition: .6s cubic-bezier(.28,-0.03,0,.99);
+        box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+      }
+
+      .card > .row {
+        color: #faf0e7;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .card > .row > .icon {
+        background: #2c2c35;
+        font-family: "Poppins", sans-serif;
+        color: #faf0e7;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;              
+        align-items: center;
+        margin-left: 25px;
+        margin-top: 15px;
+        margin-right: 15px;
+      }
+
+      .card > .row > .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        height: 80px;
+        width: 520px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition-delay: .3s;
+        transition: all .3s ease;
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked + label {
+        width: 600px;
+      }
+
+      input:checked + label .description {
+        opacity: 1 !important;            
+        transform: translateY(0) !important;
+      }
+
+      /* Made changes to elements below */
+      .description h4 {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 10px #2c2c35; 
+      }
+          
+      .card[for="c1"] {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Mag_preview.png');
+        background-repeat: no-repeat;
+        background-position: 0% 85%;
+      }
+
+      .card[for="c2"] {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Website_preview.png');
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+      }
+
+      .card[for="c3"] {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('DGprj_Brand_preview.jpg');
+        background-repeat: no-repeat;
+        background-position: 10% 0%;
+      }
+        
+      .scrolling-band{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: #de98e6;
+        font-size: 24px;
+        padding-block: 8px;
+        border-block: 3px solid #77306a;
+        display: flex;
+        overflow: hidden;
+        gap: 20px;
+      }
+        
+      .scrolling-band ul{
+        min-width: 100%;
+        list-style: none;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        animation: scroll 25s linear infinite;
+      }
+        
+      .scrolling-band span {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+        
+      @keyframes scroll{
+        to{
+          transform: translateX(calc(-100% - 20px));
+        }
+      }
+        
+      .band-computing{
+        list-style: none;
+        min-width: 100%;
+        margin-top: 50px;
+        overflow: hidden;
+        display: flex;
+      }
+        
+      .band-computing ul{
+        min-width: 100%;
+        list-style: none;
+        flex-shrink: 0;
+        display: flex;
+        gap: 70px;
+        animation: colour-change 2s steps(1) infinite;
+      }
+        
+      .band-computing li{
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        margin-left: -30px;
+      }
+        
+      @keyframes colour-change {
+        0% {
+          background-color: #de98e6;
           color: #2c2c35;
-        }
-        
-        .box img{
-          width: 100%;
-          border-radius: 10px;
-          display: block;
-          transition: transform 0.5s;
-        }
-        
-        .overlay{
-          height: 0;
-          width: 100%;
-          background: linear-gradient(transparent, #de98e6 70%);
-          border-radius: 10px;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          padding: 0 40px;
-          text-align: center;
-          font-size: 14px;
-          transition: height 0.5s;
-        }
-        
-        .overlay h3{
-          font-weight: 500px;
-          margin-bottom: 5px;
-          margin-top: 80%;
-          font-family: "Poppins", sans-serif;
-          font-size: 24px;
-          letter-spacing: 2px;
-        }
-        
-        .boxLhover img{
-          transform: scale(1.2);
-        }
-        
-        .box:hover .overlay{
-          height: 100%;
-        }
-        
-        /* For Graphic Design Projects Section */
-        .gdp-wrapper {
-          display: flex;
-          align-items: center;            
-          justify-content: center;
-          height: 500px;
-          display: flex;
-        }
-
-        .card {
-          width: 100px;
-          height: 400px;
-          border-radius: .75rem;
-          background-size: cover;
-          cursor: pointer;
-          overflow: hidden;           
-          border-radius: 2rem;
-          margin: 0 10px;              
-          display: flex;
-          align-items: flex-end;
-          transition: .6s cubic-bezier(.28,-0.03,0,.99);
-          box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-          }
-
-        .card > .row {
-          color: #faf0e7;
-          display: flex;
-          flex-wrap: nowrap;
-        }
-
-        .card > .row > .icon {
-          background: #2c2c35;
-          font-family: "Poppins", sans-serif;
-          color: #faf0e7;
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          display: flex;
-          justify-content: center;              
-          align-items: center;
-          margin-left: 25px;
-          margin-top: 15px;
-          margin-right: 15px;
-        }
-
-        .card > .row > .description {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          overflow: hidden;
-          height: 80px;
-          width: 520px;
-          opacity: 0;
-          transform: translateY(30px);
-          transition-delay: .3s;
-          transition: all .3s ease;
-        }
-
-        input {
-          display: none;
-        }
-
-        input:checked + label {
-          width: 600px;
-        }
-
-        input:checked + label .description {
-          opacity: 1 !important;            
-          transform: translateY(0) !important;
-        }
-
-        /* Made changes to elements below */
-        .description h4 {
-          font-family: "Poppins", sans-serif;
-          text-transform: uppercase;
-          text-shadow: 0px 0px 10px #2c2c35; 
-        }
-          
-        .card[for="c1"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)) ,url('GDprj_Mag_preview.png');
-          background-repeat: no-repeat;
-          background-position: 0% 85%;
-        }
-
-        .card[for="c2"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Website_preview.png');
-          background-repeat: no-repeat;
-          background-position: 0% 0%;
-        }
-
-        .card[for="c3"] {
-          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('DGprj_Brand_preview.jpg');
-          background-repeat: no-repeat;
-          background-position: 10% 0%;
-        }
-        
-        .scrolling-band{
-          margin-top: 50px;
-          margin-bottom: 20px;
-          color: #de98e6;
-          font-size: 24px;
+          border-block: 3px solid #de98e6;
           padding-block: 8px;
-          border-block: 3px solid #77306a;
-          display: flex;
-          overflow: hidden;
-          gap: 20px;
         }
-        
-        .scrolling-band ul{
-          min-width: 100%;
-          list-style: none;
-          flex-shrink: 0;
-          display: flex;
-          justify-content: space-between;
-          gap: 20px;
-          animation: scroll 25s linear infinite;
-        }
-        
-        .scrolling-band span {
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-        
-        @keyframes scroll{
-          to{
-            transform: translateX(calc(-100% - 20px));
-          }
-        }
-        
-        .band-computing{
-          list-style: none;
-          min-width: 100%;
-          margin-top: 50px;
-          overflow: hidden;
-          display: flex;
-        }
-        
-         .band-computing ul{
-          min-width: 100%;
-          list-style: none;
-          flex-shrink: 0;
-          display: flex;
-          gap: 70px;
-          animation: colour-change 2s steps(1) infinite;
-        }
-        
-        .band-computing li{
-          font-size: 18px;
-          font-weight: bold;
-          text-transform: uppercase;
-          font-family: "Poppins", sans-serif;
-          margin-left: -30px;
-        }
-        
-        @keyframes colour-change {
-          0% {
-            background-color: #de98e6;
-            color: #2c2c35;
-            border-block: 3px solid #de98e6;
-            padding-block: 8px;
-          }
 
-          50% {
-            background-color: #2c2c35;
-            color: #de98e6;
-            border-block: 3px solid #de98e6;
-          }
-
-          100% {
-            background-color: #de98e6;
-            color: #2c2c35;
-            border-block: 3px solid #de98e6;
-          }
+        50% {
+          background-color: #2c2c35;
+          color: #de98e6;
+          border-block: 3px solid #de98e6;
         }
+
+        100% {
+          background-color: #de98e6;
+          color: #2c2c35;
+          border-block: 3px solid #de98e6;
+        }
+      }
         
-        h1 h2{
-          margin: 100px 0px 20px 200px;
+      h1 h2{
+        margin: 100px 0px 20px 200px;
+        font-family: "Poppins", sans-serif;
+        color: #faf0e7;
+        font-size: 48px;
+      }
+        
+      .title-section h1{
+        font-size: 108px;
+        margin-top: 100px;
+        margin-left: 10%;
+      }
+        
+      .title-section h2{
+        margin-left: 10%;
+        font-size: 64px;
+      }
+        
+      #font-changing{
+        display: inline-block;
+        padding-left: -10px;
+        animation: font-change 2s  ease-in-out  infinite;
+        line-height: 1.2px;
+        font-size: 56px;
+        width: 310px;
+        text-align: center;
+      }
+        
+      @keyframes font-change {
+        0%, 100% {
+          color: #f9dc6f;
+          font-family: "Lexend", sans-serif;
+        }
+          
+        10%{
+          color: #f9dc6f;
           font-family: "Poppins", sans-serif;
+        }
+          
+        20%{
+          color: #f9dc6f;
+          font-family: "Berkshire Swash", fantasy;
+        }
+          
+        30%{
+          color: #de98e6;
+          font-family: "Leckerli One", cursive;
+        }
+          
+        40%{
+          color: #f9dc6f;
+          font-family: "Audiowide", monospace;
+        }
+
+        50% {
+          color: #de98e6;
+          font-family: "VT323", monospace;
+        }
+          
+        60%{
           color: #faf0e7;
-          font-size: 48px;
+          font-family: "Pirata One", fantasy;
         }
+          
+        70%{
+          color: #faf0e7;
+          font-family: "Prata", serif;
+        }
+          
+        80%{
+          color: #de98e6;
+          font-family: "Gelasio", serif;
+        }
+          
+        90%{
+          color: #faf0e7;
+          font-family: "Instrument Serif", serif;
+        }
+      }
         
-        .title-section h1{
-          font-size: 108px;
-          margin-top: 100px;
-          margin-left: 10%;
-        }
+      table{
+        float: right;
+        margin: auto;
+        width: 900px;
+      }
         
-        .title-section h2{
-          margin-left: 10%;
-          font-size: 64px;
-        }
+      td{
+        padding: 20px;
+      }
         
-        #font-changing{
-          display: inline-block;
-          padding-left: -10px;
-          animation: font-change 2s  ease-in-out  infinite;
-          line-height: 1.2px;
-          font-size: 56px;
-          width: 310px;
-          text-align: center;
-          
-          
-        }
-        
-        @keyframes font-change {
-          0%, 100% {
-            color: #f9dc6f;
-            font-family: "Lexend", sans-serif;
-          }
-          
-          10%{
-            color: #f9dc6f;
-            font-family: "Poppins", sans-serif;
-          }
-          
-          20%{
-            color: #f9dc6f;
-            font-family: "Berkshire Swash", fantasy;
-          }
-          
-          30%{
-            color: #de98e6;
-            font-family: "Leckerli One", cursive;
-          }
-          
-          40%{
-            color: #f9dc6f;
-            font-family: "Audiowide", monospace;
-          }
-
-          50% {
-            color: #de98e6;
-            font-family: "VT323", monospace;
-          }
-          
-          60%{
-            color: #faf0e7;
-            font-family: "Pirata One", fantasy;
-          }
-          
-          70%{
-            color: #faf0e7;
-            font-family: "Prata", serif;
-          }
-          
-          80%{
-            color: #de98e6;
-            font-family: "Gelasio", serif;
-          }
-          
-          90%{
-            color: #faf0e7;
-            font-family: "Instrument Serif", serif;
-          }
-        }
-        
-        table{
-          margin: auto;
-        }
-        
-        td{
-          padding: 20px;
-          width: 300px;
-        }
+      .eye-wrapper{
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 140px;
+        display: flex;      
+      }
+      
+      .eye-background{
+        width: 40px;
+        height: 40px;
+        display: block;
+        background: #A1ACAF;
+        border-radius: 50%;
+        margin-top: 105px;
+        margin-left: 65px;
+        box-shadow: inset 0px -16px 8px 0px #D6E5E7, inset 0px -16px 8px 1px #D6E5E7;
+        -moz-box-shadow: inset 0px -16px 8px 0px #D6E5E7, inset 0px -16px 8px 1px #D6E5E7;
+        position: absolute;
+        z-index: 1;
+      }
+      
+      #right-eye-white{
+        margin-left: 175px;
+      }
+      
+      #right-eye-red{
+        margin-left: 190px;
+        margin-top: 120px;
+      }
+      
+      .eye-wrapper .balls{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-radius: 50%;
+        margin-left: 60px;
+        margin-top: 100px;
+        z-index: 2;
+      }
+      
+      .eye-wrapper .balls::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 34px;
+        transform: translate(-50%, -50%);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #010000;
+      }
+      
+      .red-dot{
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #720F1C;
+        z-index: 3;
+        margin-left: 82px;
+        margin-top: 120px;
+      }
+      
+      .pingu{
+        width: 300px;
+        float: left;
+        margin-top: 200px;
+      }
         
       </style>
   </head>
@@ -507,8 +581,7 @@
             </label>
         </div>
       </div>
-
-      <div class="computing-projects">
+      
         <div class="band-computing">
           <ul>
             <li>Sick Computing Projects</li>
@@ -520,8 +593,32 @@
             <li>Sick Computing Projects</li>
           </ul>
         </div>
+      <div class="cp-projects">   
+        <script>       document.querySelector("body").addEventListener("mousemove", animate);
+          function animate() {
+              let wrapper = document.querySelectorAll(".balls");
+              wrapper.forEach((balls) =>{
+              let x = balls.getBoundingClientRect().left + balls.clientWidth / 2;
+              let y = balls.getBoundingClientRect().top + balls.clientHeight / 2;
+              let radian = Math.atan2(event.pageX - x, event.pageY - y);
+              let rotate = radian * (180 / Math.PI) * -1 + 270;
+              balls.style.transform = `rotate(${rotate}deg)`;
+            });
+          }
+        </script>
+        
+        <div class="eye-wrapper">
+          <div class="balls"></div>
+          <div class="balls"></div>
+          <div class="red-dot"></div>
+          <div class="red-dot" id="right-eye-red"></div>
+          <div class="eye-background"></div>
+          <div class="eye-background" id="right-eye-white"></div>
+        </div>
+        
+         <img class="pingu" src="pingu.png" alt="pingu the penguin from the meme, lit from below">
+        
         <div id="card-area">
-          <div class="cp-wrapper">
             <table>
               <tr>
                 <td>
@@ -556,6 +653,5 @@
           </div>   
         </div>
       </div> 
-    </div>
   </body>
 </html>
