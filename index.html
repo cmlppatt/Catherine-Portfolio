@@ -458,8 +458,8 @@
       .eye-wrapper .balls::before{
         position: absolute;
         content: "";
-        top: 50%;
-        left: 34px;
+        top: 40%;
+        left: 25px;
         transform: translate(-50%, -50%);
         width: 35px;
         height: 35px;
@@ -594,17 +594,24 @@
           </ul>
         </div>
       <div class="cp-projects">   
-        <script>       document.querySelector("body").addEventListener("mousemove", animate);
-          function animate() {
-              let wrapper = document.querySelectorAll(".balls");
-              wrapper.forEach((balls) =>{
-              let x = balls.getBoundingClientRect().left + balls.clientWidth / 2;
-              let y = balls.getBoundingClientRect().top + balls.clientHeight / 2;
-              let radian = Math.atan2(event.pageX - x, event.pageY - y);
-              let rotate = radian * (180 / Math.PI) * -1 + 270;
-              balls.style.transform = `rotate(${rotate}deg)`;
+        <script>
+            document.addEventListener("mousemove", (event) => {
+            let eyes = document.querySelectorAll(".balls");
+            eyes.forEach((eye) => {
+                let rect = eye.getBoundingClientRect();
+                let eyeX = rect.left + rect.width / 2;
+                let eyeY = rect.top + rect.height / 2;
+
+                let deltaX = event.clientX - eyeX;
+                let deltaY = event.clientY - eyeY;
+
+                let angle = Math.atan2(deltaY, deltaX);
+                let moveX = Math.cos(angle) * 10;
+                let moveY = Math.sin(angle) * 10;
+
+                eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
             });
-          }
+        });
         </script>
         
         <div class="eye-wrapper">
