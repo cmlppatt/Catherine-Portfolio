@@ -91,6 +91,7 @@
       .cp-projects{
         margin: auto;
         width: 1200px;
+        height: 600px;
       }
         
       #card-area{
@@ -150,11 +151,11 @@
         
       /* For Graphic Design Projects Section */
       .gdp-wrapper {
+        margin-left: 400px;
         display: flex;
         align-items: center;            
         justify-content: center;
-        height: 500px;
-        display: flex;
+        height: 600px;
       }
 
       .card {
@@ -395,83 +396,13 @@
       }
         
       table{
-        float: right;
+        float: left;
         margin: auto;
         width: 900px;
       }
         
       td{
         padding: 20px;
-      }
-        
-      .eye-wrapper{
-        position: absolute;
-        margin-left: 10px;
-        margin-top: 140px;
-        display: flex;      
-      }
-      
-      .eye-background{
-        width: 40px;
-        height: 40px;
-        display: block;
-        background: #A1ACAF;
-        border-radius: 50%;
-        margin-top: 105px;
-        margin-left: 65px;
-        box-shadow: inset 0px -16px 8px 0px #D6E5E7, inset 0px -16px 8px 1px #D6E5E7;
-        -moz-box-shadow: inset 0px -16px 8px 0px #D6E5E7, inset 0px -16px 8px 1px #D6E5E7;
-        position: absolute;
-        z-index: 1;
-      }
-      
-      #right-eye-white{
-        margin-left: 175px;
-      }
-      
-      #right-eye-red{
-        margin-left: 190px;
-        margin-top: 120px;
-      }
-      
-      .eye-wrapper .balls{
-        position: relative;
-        width: 50px;
-        height: 50px;
-        display: block;
-        border-radius: 50%;
-        margin-left: 60px;
-        margin-top: 100px;
-        z-index: 2;
-      }
-      
-      .eye-wrapper .balls::before{
-        position: absolute;
-        content: "";
-        top: 40%;
-        left: 25px;
-        transform: translate(-50%, -50%);
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background: #010000;
-      }
-      
-      .red-dot{
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #720F1C;
-        z-index: 3;
-        margin-left: 82px;
-        margin-top: 120px;
-      }
-      
-      .pingu{
-        width: 300px;
-        float: left;
-        margin-top: 200px;
       }
       
       #epic-goose{
@@ -655,37 +586,6 @@
           </ul>
         </div>
       <div class="cp-projects">   
-        <script>
-            document.addEventListener("mousemove", (event) => {
-            let eyes = document.querySelectorAll(".balls");
-            eyes.forEach((eye) => {
-                let rect = eye.getBoundingClientRect();
-                let eyeX = rect.left + rect.width / 2;
-                let eyeY = rect.top + rect.height / 2;
-
-                let deltaX = event.clientX - eyeX;
-                let deltaY = event.clientY - eyeY;
-
-                let angle = Math.atan2(deltaY, deltaX);
-                let moveX = Math.cos(angle) * 10;
-                let moveY = Math.sin(angle) * 10;
-
-                eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
-        });
-        </script>
-        
-        <div class="eye-wrapper">
-          <div class="balls"></div>
-          <div class="balls"></div>
-          <div class="red-dot"></div>
-          <div class="red-dot" id="right-eye-red"></div>
-          <div class="eye-background"></div>
-          <div class="eye-background" id="right-eye-white"></div>
-        </div>
-        
-         <img class="pingu" src="pingu.png" alt="pingu the penguin from the meme, lit from below">
-        
         <div id="card-area">
             <table>
               <tr>
