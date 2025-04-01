@@ -64,7 +64,6 @@
       }
         
       body {
-        background-color: #2c2c35;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -150,11 +149,27 @@
         
       /* For Graphic Design Projects Section */
       .gdp-wrapper {
-        margin-left: 400px;
+        position: relative;
+      }
+      
+      .gdp-bg{
+        background-image: url("background-gd.png");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      
+      .gdp-content{
+        position: relative;
+        z-index: 1;
+        margin-top: 0px;
         display: flex;
         align-items: center;            
         justify-content: center;
-        height: 600px;
+        margin-left: 400px;
       }
 
       .card {
@@ -245,9 +260,10 @@
       }
         
       .scrolling-band{
-        margin-top: 50px;
+        margin-top: 0px;
         margin-bottom: 20px;
         color: #de98e6;
+        background-color: #2c2c35;
         font-size: 24px;
         padding-block: 8px;
         border-block: 3px solid #77306a;
@@ -419,7 +435,7 @@
         width: 875px;
         position: absolute;
         z-index: -1;
-        left: 704px;
+        left: 344px;
         top: 30px;
       }
       
@@ -442,11 +458,16 @@
         top: -10px;
       }
       
+      .title-wrapper{
+        position: relative;
+      }
+      
       .title-section{
         background-image: url("title_bg.png");
-        background-size: cover;
-        background-position: center;
-        position: relative;
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
         z-index: -10;
       }
       
@@ -454,9 +475,11 @@
         width: 1200px;
         height: 800px;
         margin: auto;
+        position: relative;
+        z-index: 1;
       }
         
-      .title-section h1{
+      .title-content h1{
         font-family: "Poppins", sans-serif;
         color: #F2CF66;
         font-size: 115px;
@@ -465,7 +488,7 @@
         line-height: 90px;
       }
         
-      .title-section h2{
+      .title-content h2{
         font-family: "Poppins", sans-serif;
         margin-left: 35px;
         font-size: 24px;
@@ -473,7 +496,7 @@
         color: #FAF0E7;
       }
       
-      .title-section p{
+      .title-content p{
         margin-left: 40px;
         font-size: 16px;
         font-weight: bold;
@@ -492,7 +515,9 @@
   </head>
   <body>
     <div class="page">
-      <div class="title-section">
+      <div class="title-wrapper">
+      
+        <div class="title-section"></div>
         
       <div class="title-content">
         <div id="frame"></div>
@@ -512,6 +537,8 @@
         <img id="detail-goose" src="details-goose.png" alt="Excess goose ruff and cowboy hat string">
       </div>
       </div>
+      
+      
       <div class="graphic-design-projects">
         <div class="scrolling-band">
           <ul>
@@ -556,7 +583,11 @@
           </ul>
         </div>
         
+        
         <div class="gdp-wrapper">
+          <div class="gdp-bg"></div>
+          
+          <div class="gdp-content">
             <!-- Branding Porject -->
             <input type="radio" name="slide" id="c3">
             <label for="c3" class="card">
@@ -594,7 +625,7 @@
             </label>
         </div>
       </div>
-      
+
         <div class="band-computing">
           <ul>
             <li>Sick Computing Projects</li>
