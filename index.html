@@ -56,11 +56,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
-      .page{
-        margin: auto;
-        font-family: "Gelasio", serif;
-      }
-
       * {
         box-sizing: border-box;
         margin: 0;
@@ -73,6 +68,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Gelasio", serif;
       }
 
       a{
@@ -297,7 +296,7 @@
       }
         
       .band-computing li{
-        font-size: 18px;
+        font-size: 24px;
         font-weight: bold;
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
@@ -408,8 +407,11 @@
       
       #epic-goose{
         width: 1300px;
+        height: 600px;
+        object-fit: cover;
+        object-position: 100% 0%;
         left: -40px;
-        top: 105px;
+        top: 50px;
         position: relative;
       }
       
@@ -421,7 +423,7 @@
         padding: 20px;
         position: absolute;
         z-index: 2;
-        margin-top: 100px;
+        margin-top: 50px;
       }
       
       .text{
@@ -429,12 +431,18 @@
         position: absolute;
         color: #faf0e7;
         z-index: 4;
-        top: 40px;
+        top: -10px;
       }
       
       .title-section{
-        height: 800px;
+        background-image: url("title_bg.png");
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .title-content{
         width: 1200px;
+        height: 800px;
         margin: auto;
         position: relative;
       }
@@ -476,6 +484,8 @@
   <body>
     <div class="page">
       <div class="title-section">
+        
+      <div class="title-content">
         <div id="frame"></div>
         <div class="text">
           <h1>Howdy<br>&hairsp;There</h1>
@@ -490,7 +500,7 @@
           </h2>
         </div>
         <img id="epic-goose" src="goose.gif" alt="Huge epic canadian goose with cowboy hat, and ruff around its neck. Inside of its mouth is divded into a bunch of small triangles which change colours">
-        
+      </div>
       </div>
       <div class="graphic-design-projects">
         <div class="scrolling-band">
