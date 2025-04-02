@@ -83,6 +83,56 @@
         padding: 5px 15px;
         width: fit-content;
       }
+      
+      /* For nav bar*/
+      .nav-bar{
+        width: 100%;
+        background-color: #2c2c35;
+        box-shadow: 0px 5px #16161b;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      }
+      
+      .nav-bar ul{
+        width: 1200px;
+        text-align: center;
+        background-color: #2c2c35;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px auto;
+        overflow: hidden;
+      }
+      
+      .nav-bar li{
+        float: left;
+      }
+      
+      .nav-bar a{
+        color: #f9dc6f;
+        font-size: 16px;
+        font-family: "Poppins", serif;
+        text-decoration: none;
+        padding: 15px 50px;
+        display: block;
+        text-align: center;
+        border-radius: 0px;
+      }
+      
+      #last-item{
+        float: right;
+      }
+      
+      .nav-bar a:hover{
+        background-color: #16161b;
+        border-radius: 0px;
+      }
+      
+      .nav-bar img{
+        width: 30px;
+        margin-top: -5px;
+        margin-bottom: -10px;
+      }
         
       /* For Computing Projects Section */
       .cp-wrapper {
@@ -170,6 +220,7 @@
       /* For Graphic Design Projects Section */
       .gdp-wrapper {
         position: relative;
+        height: 600px;
       }
       
       .gdp-bg{
@@ -184,6 +235,7 @@
       
       .gdp-content{
         position: relative;
+        height: 600px;
         display: flex;
         align-items: center;            
         justify-content: center;
@@ -477,6 +529,7 @@
       
       .title-wrapper{
         position: relative;
+        top: 35px;
       }
       
       .title-section{
@@ -532,6 +585,16 @@
     </style>
   </head>
   <body>
+    <div class="nav-bar">
+      <ul>
+        <li><a href="https://cmlppatt.github.io/Graphic-Design-Projects/">COUNTRY ROADS</a></li>
+        <li><a href="https://cmlppatt.github.io/Graphic-Design-Projects/#graphic-design">GRAPHIC DESIGN</a></li>
+        <li><a href="https://cmlppatt.github.io/Graphic-Design-Projects/#computing">COMPUTING</a></li>
+        <li><a href="https://cmlppatt.github.io/Graphic-Design-Projects/#about">ABOUT</a></li>
+        <li id="last-item"><a href="mailto:cmlppatt@uwaterloo.ca"><img src="mail_icon.png" alt="Clickable mail icon"></a></li>
+      </ul>
+    </div>
+    
     <div class="page">
       <div class="title-wrapper">
       
@@ -556,7 +619,11 @@
       </div>
       </div>
       
+      <div id="about"></div>
+      <!-- Add about section-->
       
+      
+      <div id="graphic-design"></div>
         <div class="scrolling-band">
           <ul>
             <li>
@@ -641,7 +708,7 @@
             </label>
         </div>
       </div>
-
+      <div id="computing"></div>
         <div class="band-computing">
           <ul>
             <li>Sick Computing Projects</li>
@@ -665,7 +732,7 @@
                     <img src="preview-c.png" alt="">
                     <div class="overlay">
                       <h3>C# Project</h3>
-                      <a href="#">Show Me More</a>
+                      <a href="https://cmlppatt.github.io/csharp-project-page/">Show Me More</a>
                     </div>
                   </div>
                 </td>
@@ -674,7 +741,7 @@
                     <img src="preview-python.png" alt="">
                     <div class="overlay">
                       <h3>Python Project</h3>
-                      <a href="#">Show Me More</a>
+                      <a href="https://cmlppatt.github.io/python-project-page/">Show Me More</a>
                     </div>
                   </div>
                 </td>
@@ -683,7 +750,7 @@
                     <img src="preview-racket.png" alt="">
                     <div class="overlay">
                       <h3>Racket Project</h3>
-                      <a href="#">Show Me More</a>
+                      <a href="https://cmlppatt.github.io/Racket-project-page/">Show Me More</a>
                     </div>
                   </div>
                 </td>
