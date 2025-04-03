@@ -604,26 +604,47 @@
         z-index: 1;
       }
       
-      .contact-wrapper{
+      .contact-wrapper {
         position: relative;
-        align-content: center;
-      }
-      
-      .contact-section{
-        background-image: url("pingu.png");
-        background-size: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
         width: 100%;
-        position: absolute;
-        z-index: -10;
+        margin: 0 auto; 
+        background-color: #2c2c35;
+      }
+
+      section {
+          position: absolute;
+          top: 50%;                 /* Vertically center */
+          left: 50%;                /* Horizontally center */
+          transform: translate(-50%, -50%); /* Correct for true centering */
+          width: 1000px;
+          height: 700px;
+          z-index: 10;
+          pointer-events: none;
+      }
+
+      section .side {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;             /* Set to fill parent container */
+          width: 100%;              /* Adjust to full width */
+          background: url("bread.png");
+          background-repeat: no-repeat;
+          background-size: contain; /* Ensure image scales properly */
+          background-position: center; /* Center the background image */
+      }
+
+      
+      section .side#side1{
+        clip-path: polygon(0% 0%, 48% 0%, 27% 25%, 55% 27%, 36% 41%, 56% 53%, 29% 66%, 57% 75%, 34% 88%, 59% 92%, 46% 100%, 0% 100%);
       }
       
-      .contact-content{
-        width: 1200px;
-        height: 500px;
-        margin: auto;
-        position: relative;
-        z-index: 1;
+      section .side#side2{
+        clip-path: polygon(100% 0, 48% 0%, 27% 25%, 55% 27%, 36% 41%, 56% 53%, 29% 66%, 57% 75%, 34% 88%, 59% 92%, 46% 100%, 100% 100%);
       }
     </style>
   </head>
@@ -809,10 +830,57 @@
       </div>
       
       <div class="contact-wrapper">
-        <div class="contact-section"></div>
-        <div class="contact-content">
-          
-        </div>
+          <section>
+            <div class="side" id="side1"></div>
+            <div class="side" id="side2"></div>
+          </section>
+    
+          <div class="contentBx">
+
+          </div>
+    
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const side1 = document.getElementById("side1");
+    const side2 = document.getElementById("side2");
+    let animationTriggered = false;
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Check if scrolling back up and reset if necessary
+        if (window.scrollY < lastScrollY) {
+            animationTriggered = false; // Reset when scrolling up
+            side1.style.left = '0px';    // Reset positions of side1
+            side2.style.left = '0px';    // Reset positions of side2
+        }
+
+        // If we have reached the bottom of the page, trigger the animation
+        if (!animationTriggered && scrollPosition >= documentHeight - 1) {
+            animationTriggered = true; // Set flag to trigger the animation
+        }
+
+        // Trigger the animation once the bottom is reached
+        if (animationTriggered) {
+            const maxOffset = 300;  // Maximum movement allowed for the sides
+            let offset = window.pageYOffset;
+            offset = Math.min(offset, maxOffset); // Limit the maximum offset
+
+            // Move the sides based on scroll position
+            side1.style.left = -offset + "px";
+            side2.style.left = offset + "px";
+        }
+
+        // Update last scroll position
+        lastScrollY = window.scrollY;
+    });
+});
+
+
+
+      </script>
       </div>
     </div>
   </body>
