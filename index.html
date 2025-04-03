@@ -604,38 +604,37 @@
         z-index: 1;
       }
       
-      .contact-wrapper {
+      .bread-wrapper {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 700px;
+        height: 500px;
         width: 100%;
         margin: 0 auto; 
         background-color: #2c2c35;
       }
 
       section {
-          position: absolute;
-          top: 50%;                 /* Vertically center */
-          left: 50%;                /* Horizontally center */
-          transform: translate(-50%, -50%); /* Correct for true centering */
-          width: 1000px;
-          height: 700px;
-          z-index: 10;
-          pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        height: 500px;
+        z-index: 10;
       }
 
       section .side {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;             /* Set to fill parent container */
-          width: 100%;              /* Adjust to full width */
-          background: url("bread.png");
-          background-repeat: no-repeat;
-          background-size: contain; /* Ensure image scales properly */
-          background-position: center; /* Center the background image */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url("bread.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
 
       
@@ -829,58 +828,45 @@
         </div>
       </div>
       
-      <div class="contact-wrapper">
-          <section>
-            <div class="side" id="side1"></div>
-            <div class="side" id="side2"></div>
-          </section>
-    
-          <div class="contentBx">
-
-          </div>
+      <div class="bread-wrapper">
+        <section>
+          <div class="side" id="side1"></div>
+          <div class="side" id="side2"></div>
+        </section>
     
         <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const side1 = document.getElementById("side1");
-    const side2 = document.getElementById("side2");
-    let animationTriggered = false;
-    let lastScrollY = window.scrollY;
+          document.addEventListener("DOMContentLoaded", function () {
+          const side1 = document.getElementById("side1");
+          const side2 = document.getElementById("side2");
+          let animationTriggered = false;
+          let lastScrollY = window.scrollY;
 
-    window.addEventListener("scroll", function () {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
+            window.addEventListener("scroll", function () {
+              const scrollPosition = window.scrollY + window.innerHeight;
+              const documentHeight = document.documentElement.scrollHeight;
 
-        // Check if scrolling back up and reset if necessary
-        if (window.scrollY < lastScrollY) {
-            animationTriggered = false; // Reset when scrolling up
-            side1.style.left = '0px';    // Reset positions of side1
-            side2.style.left = '0px';    // Reset positions of side2
-        }
+              if (window.scrollY < lastScrollY) {
+                  animationTriggered = false;
+                  side1.style.left = '0px';  
+                  side2.style.left = '0px';  
+              }
 
-        // If we have reached the bottom of the page, trigger the animation
-        if (!animationTriggered && scrollPosition >= documentHeight - 1) {
-            animationTriggered = true; // Set flag to trigger the animation
-        }
+              if (!animationTriggered && scrollPosition >= documentHeight - 1) {
+                  animationTriggered = true;
+              }
 
-        // Trigger the animation once the bottom is reached
-        if (animationTriggered) {
-            const maxOffset = 300;  // Maximum movement allowed for the sides
-            let offset = window.pageYOffset;
-            offset = Math.min(offset, maxOffset); // Limit the maximum offset
+              if (animationTriggered) {
+                const maxOffset = 500; 
+                let offset = window.pageYOffset;
+                offset = Math.min(offset, maxOffset); 
+                side1.style.left = -offset + "px";
+                side2.style.left = offset + "px";
+              }
 
-            // Move the sides based on scroll position
-            side1.style.left = -offset + "px";
-            side2.style.left = offset + "px";
-        }
-
-        // Update last scroll position
-        lastScrollY = window.scrollY;
-    });
-});
-
-
-
-      </script>
+              lastScrollY = window.scrollY;
+            });
+          });
+        </script>
       </div>
     </div>
   </body>
