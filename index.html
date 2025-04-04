@@ -226,7 +226,7 @@
       /* For Graphic Design Projects Section */
       .gdp-wrapper {
         position: relative;
-        height: 600px;
+        height: 800px;
       }
       
       .gdp-bg{
@@ -240,12 +240,36 @@
       }
       
       .gdp-content{
-        margin-left: 400px;
-        position: relative;
-        height: 600px;
+        width: 1400px;
+        margin: auto;
+        padding-top: 135px;
+        
+      }
+      
+      .gdp-slides{
         display: flex;
         align-items: center;            
         justify-content: center;
+      }
+      
+      #gdp-title{
+        width: 400px;
+        float: left;
+        transform: rotate(-3deg);
+        margin-right: 30px;
+      }
+
+      .gdp-content p{
+        padding-left: 500px;
+        color: #faf0e7;
+        font-size: 16px;
+      }
+      
+      #gdp-tagline{
+        padding-top: 40px;
+        margin-bottom: 8px;
+        font-style: italic;
+        font-weight: bold;
       }
 
       .card {
@@ -624,9 +648,9 @@
       section {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 55%;
         transform: translate(-50%, -50%);
-        width: 1000px;
+        width: 1400px;
         height: 500px;
         z-index: 10;
       }
@@ -639,7 +663,7 @@
         width: 100%;
         background: url("bread.png");
         background-repeat: no-repeat;
-        background-size: contain;
+        
         background-position: center;
       }
 
@@ -655,14 +679,13 @@
       /*For jum */
       .jump-buffer {
         position: relative;
-        top: -60px;
+        top: -57px;
         height: 0;
       }
       
     </style>
   </head>
   <body>
-    <div id="main"></div>
     <div class="nav-bar">
       <ul>
         <li><a href="https://cmlppatt.github.io/Graphic-Design-Projects/#main">COUNTRY ROADS</a></li>
@@ -674,6 +697,7 @@
     </div>
     
     <div class="page">
+      <div id="main"></div>
       <div class="title-wrapper">
         <div class="title-section"></div>
         <div class="title-content">
@@ -693,9 +717,9 @@
         </div>
       </div>
       
-      <div class="pink-divider"></div>
       
       <div id="about" class="jump-buffer"></div>
+      <div class="pink-divider"></div>
       <!-- Add about section-->
       <div class="about-wrapper">
         <div class="about-section"></div>
@@ -752,7 +776,26 @@
           <div class="gdp-bg"></div>
           
           <div class="gdp-content">
+
+          <img id="gdp-title" src="gd-title.png" alt="Graphic Design Projects">
+            
+          <div class="gdp-content-right">
+          
+            
+            <p id="gdp-tagline"> All-nighters, crashing software, and a dream.</p>
+            <p>
+              With six years of experience in graphic design, I’ve developed strong
+              proficiency in Adobe Suite programs like Illustrator, Photoshop, and
+              InDesign. The selected projects demonstrate my ability to create
+              visually compelling work across print and digital media, with careful
+              attention to detail, composition, and a dynamic approach that brings
+              ideas to life.
+            </p>
+          
             <!-- Branding Porject -->
+            <div class="gdp-slides">
+              
+            
             <input type="radio" name="slide" id="c3">
             <label for="c3" class="card">
               <div class="row">
@@ -787,8 +830,12 @@
                 </div>
               </div>
             </label>
+              </div>
+          </div>
         </div>
       </div>
+      
+      
       <div id="computing" class="jump-buffer"></div>
         <div class="band-computing">
           <ul>
