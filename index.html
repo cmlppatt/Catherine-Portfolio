@@ -256,7 +256,7 @@
         width: 400px;
         float: left;
         transform: rotate(-3deg);
-        margin-right: 50px;
+        margin-right: 80px;
         padding-top: 30px;
       }
 
@@ -649,7 +649,7 @@
       section {
         position: absolute;
         top: 50%;
-        left: 55%;
+        left: 50%;
         transform: translate(-50%, -50%);
         width: 1400px;
         height: 500px;
@@ -920,9 +920,12 @@
               if (animationTriggered) {
                 const maxOffset = 500; 
                 let offset = window.pageYOffset;
-                offset = Math.min(offset, maxOffset); 
+                offset = Math.min(offset, maxOffset);
+
+                let side2Offset = offset * 1.2;
+
                 side1.style.left = -offset + "px";
-                side2.style.left = offset + "px";
+                side2.style.left = side2Offset + "px";
               }
 
               lastScrollY = window.scrollY;
