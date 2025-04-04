@@ -143,6 +143,7 @@
       /* For Computing Projects Section */
       .cp-wrapper {
         position: relative;
+        height: 700px;
       }
       
       .cp-bg{
@@ -156,20 +157,37 @@
       }
       
       .cp-content{
-        position: relative;
-        display: flex;
-        align-items: center;            
-        justify-content: center;
+        width: 1300px;
+        margin: auto;
+        padding-top: 130px;
       }
       
-      .cp-projects{
-        margin: auto;
-        width: 1200px;
-        height: 400px;
+      .cp-content p{
+        width: 1500px;
+        padding-bottom: 30px;
+        color: #faf0e7;
+        font-size: 16px;
+      }
+      
+      #cp-tagline{
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 8px;
+        padding-bottom: 0px;
+      }
+      
+      #cp-title{
+        width: 525px;
+        float: left;
+        margin-right: 30px;
+      }
+      
+      table{
+        width: 700px;
       }
         
-      #card-area{
-        padding: 20px 0;
+      td{
+        padding-right: 15px;
       }
         
       .box{
@@ -178,10 +196,12 @@
         overflow: hidden;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
         color: #2c2c35;
+        height: 250px;
       }
         
       .box img{
         width: 100%;
+        height: 100%;
         border-radius: 10px;
         display: block;
         transition: transform 0.5s;
@@ -191,7 +211,7 @@
         height: 0;
         width: 100%;
         background: linear-gradient(transparent, #de98e6 70%);
-        border-radius: 10px;
+        border-radius: 14px;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -200,9 +220,9 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 0 40px;
+        padding: 0 20px;
         text-align: center;
-        font-size: 14px;
+        font-size: 10px;
         transition: height 0.5s;
       }
         
@@ -211,7 +231,7 @@
         margin-bottom: 5px;
         margin-top: 80%;
         font-family: "Poppins", sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 2px;
       }
         
@@ -243,7 +263,6 @@
         width: 1200px;
         margin: auto;
         padding-top: 95px;
-        
       }
       
       .gdp-slides{
@@ -257,17 +276,17 @@
         float: left;
         transform: rotate(-3deg);
         margin-right: 80px;
-        padding-top: 30px;
+        padding-top: 15px;
       }
 
       .gdp-content p{
-        padding-left: 500px;
+        padding-left: 450px;
         color: #faf0e7;
         font-size: 16px;
       }
       
       #gdp-tagline{
-        padding-top: 40px;
+        padding-top: 20px;
         margin-bottom: 8px;
         font-style: italic;
         font-weight: bold;
@@ -506,16 +525,6 @@
           color: #faf0e7;
           font-family: "Instrument Serif", serif;
         }
-      }
-        
-      table{
-        margin: auto;
-        margin-top: 50px;
-        width: 1000px;
-      }
-        
-      td{
-        padding-right: 40px;
       }
       
       #epic-goose{
@@ -852,8 +861,20 @@
       
       <div class="cp-wrapper">
         <div class="cp-bg"></div>
-        <div class="cp-content">   
-        <div id="card-area">
+        <div class="cp-content">
+          <img id="cp-title" src="cp-title.png" alt="Hello World, Computing Projects">
+          
+          <div class="cp-content-right">
+          <p id="cp-tagline"> All-nighters, crashing software, and a dream.</p>
+          <p>
+            With six years of experience in graphic design, I’ve developed strong
+            proficiency in Adobe Suite programs like Illustrator, Photoshop, and
+            InDesign. The selected projects demonstrate my ability to create
+            visually compelling work across print and digital media, with careful
+            attention to detail, composition, and a dynamic approach that brings
+            ideas to life.
+          </p>
+          
             <table>
               <tr>
                 <td>
@@ -884,8 +905,8 @@
                   </div>
                 </td>
               </tr>
-            </table>
-          </div>  
+            </table> 
+          </div>
         </div>
       </div>
       
