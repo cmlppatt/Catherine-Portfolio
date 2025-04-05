@@ -817,14 +817,11 @@
         <div class="gdp-content">    
           <img id="gdp-title" src="gd-title.png" alt="Graphic Design Projects">  
           <div class="gdp-content-right">
-            <p id="gdp-tagline"> All-nighters, crashing software, and a dream.</p>
+            <p id="gdp-tagline"> 
+              <i>All-nighters, crashing software, and a dream.</i>
+            </p>
             <p>
-              With six years of experience in graphic design, I’ve developed strong
-              proficiency in Adobe Suite programs like Illustrator, Photoshop, and
-              InDesign. The selected projects demonstrate my ability to create
-              visually compelling work across print and digital media, with careful
-              attention to detail, composition, and a dynamic approach that brings
-              ideas to life.
+              With six years of experience in graphic design, I’ve developed strong proficiency in Adobe Suite programs like Illustrator, Photoshop, and InDesign. The selected projects demonstrate my ability to create visually compelling work across print and digital media, with careful attention to detail, composition, and a dynamic approach that brings ideas to life.
             </p>
             <div class="gdp-slides">
               <input type="radio" name="slide" id="c3">
@@ -881,14 +878,11 @@
         <div class="cp-content">
           <img id="cp-title" src="cp-title.png" alt="Hello World, Computing Projects"> 
           <div class="cp-content-right">
-            <p id="cp-tagline"> All-nighters, crashing software, and a dream.</p>
+            <p id="cp-tagline"> 
+              <i>All-nighters, crashing software, and a dream.</i>
+            </p>
             <p>
-              With six years of experience in graphic design, I’ve developed strong
-              proficiency in Adobe Suite programs like Illustrator, Photoshop, and
-              InDesign. The selected projects demonstrate my ability to create
-              visually compelling work across print and digital media, with careful
-              attention to detail, composition, and a dynamic approach that brings
-              ideas to life.
+              With six years of experience in graphic design, I’ve developed strong proficiency in Adobe Suite programs like Illustrator, Photoshop, and InDesign. The selected projects demonstrate my ability to create visually compelling work across print and digital media, with careful attention to detail, composition, and a dynamic approach that brings ideas to life.
             </p>
             <table>
               <tr>
@@ -945,17 +939,21 @@
           const side2 = document.getElementById("side2");
           let animationTriggered = false;
           let lastScrollY = window.scrollY;
+            
             window.addEventListener("scroll", function () {
               const scrollPosition = window.scrollY + window.innerHeight;
               const documentHeight = document.documentElement.scrollHeight;
+              
               if (window.scrollY < lastScrollY) {
                   animationTriggered = false;
                   side1.style.left = '0px';  
-                  side2.style.left = '0px';  
+                  
+                side2.style.left = '0px';  
               }
               if (!animationTriggered && scrollPosition >= documentHeight - 1) {
                   animationTriggered = true;
               }
+              
               if (animationTriggered) {
                 const maxOffset = 500; 
                 let offset = window.pageYOffset;
