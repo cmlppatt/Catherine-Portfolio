@@ -681,8 +681,26 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1; /* behind the bread which is z-index 10 */
-        color: #faf0e7;
         text-align: center;
+      }
+      
+      .contact-text h1{
+        color: #f9dc6f;
+        font-family: "Poppins", sans-serif;
+        line-height: 75px;
+        font-size: 96px;
+        margin-bottom: 20px;
+      }
+      
+      .contact-text p{
+        margin-left: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #FAF0E7;
+      }
+      
+      #email{
+        color: #f9dc6f;
       }
       
       /* 
@@ -933,7 +951,12 @@
       <div class="pink-divider"></div>
       <div class="bread-wrapper">
         <div class="contact-text">
-          <h2>Break bread with me</h2>
+          <h1>BREAK BREAD<br>WITH ME!</h1>
+          <p>
+            I'm currently based in Kitchener, Ontario.
+            <br> Let's connect:
+            <span id="email">patterson08catherine@gmail.com</span>
+          </p>
         </div>
         <section>
           <div class="side" id="side1"></div>
