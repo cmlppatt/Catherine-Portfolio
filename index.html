@@ -675,6 +675,16 @@
       }
       
       /* Contact section */
+      .contact-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* behind the bread which is z-index 10 */
+        color: #faf0e7;
+        text-align: center;
+      }
+      
       /* 
         Code copied from: https://www.youtube.com/watch?v=sAfFCbx2KLg&ab_channel=OnlineTutorials
         Author: Online Tutorials
@@ -922,6 +932,9 @@
       <!-- Contact Section -->
       <div class="pink-divider"></div>
       <div class="bread-wrapper">
+        <div class="contact-text">
+          <h2>Break bread with me</h2>
+        </div>
         <section>
           <div class="side" id="side1"></div>
           <div class="side" id="side2"></div>
@@ -939,21 +952,21 @@
           const side2 = document.getElementById("side2");
           let animationTriggered = false;
           let lastScrollY = window.scrollY;
-            
+
             window.addEventListener("scroll", function () {
-              const scrollPosition = window.scrollY + window.innerHeight;
+              const scrollPosition = window.scrollY +window.innerHeight;
               const documentHeight = document.documentElement.scrollHeight;
-              
+
               if (window.scrollY < lastScrollY) {
                   animationTriggered = false;
                   side1.style.left = '0px';  
-                  
-                side2.style.left = '0px';  
+                  side2.style.left = '0px';  
               }
+              
               if (!animationTriggered && scrollPosition >= documentHeight - 1) {
                   animationTriggered = true;
               }
-              
+
               if (animationTriggered) {
                 const maxOffset = 500; 
                 let offset = window.pageYOffset;
