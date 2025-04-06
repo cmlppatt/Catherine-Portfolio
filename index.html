@@ -254,11 +254,10 @@
       .about-wrapper{
         position: relative;
         align-content: center;
+        height: 500px;
       }
       
-      .about-section{
-        background-image: url("pingu.png");
-        background-size: 100%;
+      .about-video{
         height: 100%;
         width: 100%;
         position: absolute;
@@ -800,7 +799,11 @@
       <div id="about" class="jump-buffer"></div>
       <div class="pink-divider"></div>
       <div class="about-wrapper">
-        <div class="about-section"></div>
+        <div class="about-video">
+          <video autoplay muted loop>
+            <source src="sample_vid.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="about-content">
         
         </div>
