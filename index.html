@@ -254,6 +254,69 @@
         top: -10px;
       }
       
+      #font-changing{
+        animation: font-change 2s  ease-in-out  infinite;
+        line-height: 1.2px;
+        font-size: 68px;
+        width: 310px;
+        position: absolute;
+        z-index: 1;
+        left: 30px;
+        top: 550px;
+      }
+        
+      @keyframes font-change{
+        0%, 100% {
+          color: #f9dc6f;
+          font-family: "Lexend", sans-serif;
+        }
+          
+        10%{
+          color: #f9dc6f;
+          font-family: "Poppins", sans-serif;
+        }
+          
+        20%{
+          color: #f9dc6f;
+          font-family: "Berkshire Swash", fantasy;
+        }
+          
+        30%{
+          color: #de98e6;
+          font-family: "Leckerli One", cursive;
+        }
+          
+        40%{
+          color: #f9dc6f;
+          font-family: "Workbench", monospace;
+        }
+
+        50% {
+          color: #de98e6;
+          font-family: "VT323", monospace;
+        }
+          
+        60%{
+          color: #faf0e7;
+          font-family: "Pirata One", fantasy;
+        }
+          
+        70%{
+          color: #faf0e7;
+          font-family: "Prata", serif;
+        }
+          
+        80%{
+          color: #de98e6;
+          font-family: "Gelasio", serif;
+        }
+          
+        90%{
+          color: #faf0e7;
+          font-family: "Instrument Serif", serif;
+        }
+      }
+      
      /* About Section*/
       .about-wrapper{
         position: relative;
@@ -272,21 +335,20 @@
       }
       
       .about-content{
+        position: absolute;
+        top: 150px;
+        left: 40%;
+        transform: translateX(150px);
         width: 700px;
-        margin-left: 850px;
-        padding-top: 150px;
         height: 750px;
-        position: relative;
         z-index: 1;
       }
       
       .about-content h2{
-        width: 700px;
         color: #f9dc6f;
         font-family: "Poppins", sans-serif;
-        line-height: 75px;
         font-size: 96px;
-        margin-bottom: 20px;
+        margin-bottom: -10px;
         text-shadow: 0px 1px 15px #2c2c35;
       }
       
@@ -328,7 +390,7 @@
         animation: scroll 25s linear infinite;
       }
         
-      .scrolling-band span {
+      .scrolling-band span{
         font-family: "Poppins", sans-serif;
         font-weight: bold;
         text-transform: uppercase;
@@ -397,7 +459,7 @@
         Description: Video walks through steps to create 4 image cards and how to transition between them using radio buttons
         Date retrieved: March 11th 2025
       */
-      .card {
+      .card{
         width: 100px;
         height: 300px;
         border-radius: .75rem;
@@ -412,13 +474,13 @@
         box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
       }
 
-      .card > .row {
+      .card > .row{
         color: #faf0e7;
         display: flex;
         flex-wrap: nowrap;
       }
 
-      .card > .row > .icon {
+      .card > .row > .icon{
         background: #2c2c35;
         font-family: "Poppins", sans-serif;
         color: #faf0e7;
@@ -433,7 +495,7 @@
         margin-right: 15px;
       }
 
-      .card > .row > .description {
+      .card > .row > .description{
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -446,38 +508,38 @@
         transition: all .3s ease;
       }
 
-      input {
+      input{
         display: none;
       }
 
-      input:checked + label {
+      input:checked + label{
         width: 600px;
       }
 
-      input:checked + label .description {
+      input:checked + label .description{
         opacity: 1 !important;            
         transform: translateY(0) !important;
       }
 
-      .description h4 {
+      .description h4{
         font-family: "Poppins", sans-serif;
         text-transform: uppercase;
         text-shadow: 0px 0px 10px #2c2c35; 
       }
           
-      .card[for="c1"] {
+      .card[for="c1"]{
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Mag_preview.png');
         background-repeat: no-repeat;
         background-position: 0% 85%;
       }
 
-      .card[for="c2"] {
+      .card[for="c2"]{
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('GDprj_Website_preview.png');
         background-repeat: no-repeat;
         background-position: 0% 0%;
       }
 
-      .card[for="c3"] {
+      .card[for="c3"]{
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('DGprj_Brand_preview.jpg');
         background-repeat: no-repeat;
         background-position: 10% 0%;
@@ -509,7 +571,7 @@
         margin-left: -30px;
       }
         
-      @keyframes colour-change {
+      @keyframes colour-change{
         0% {
           background-color: #de98e6;
           color: #2c2c35;
@@ -529,74 +591,11 @@
           border-block: 3px solid #de98e6;
         }
       }
-        
-      #font-changing{
-        animation: font-change 2s  ease-in-out  infinite;
-        line-height: 1.2px;
-        font-size: 68px;
-        width: 310px;
-        position: absolute;
-        z-index: 1;
-        left: 30px;
-        top: 550px;
-      }
-        
-      @keyframes font-change {
-        0%, 100% {
-          color: #f9dc6f;
-          font-family: "Lexend", sans-serif;
-        }
-          
-        10%{
-          color: #f9dc6f;
-          font-family: "Poppins", sans-serif;
-        }
-          
-        20%{
-          color: #f9dc6f;
-          font-family: "Berkshire Swash", fantasy;
-        }
-          
-        30%{
-          color: #de98e6;
-          font-family: "Leckerli One", cursive;
-        }
-          
-        40%{
-          color: #f9dc6f;
-          font-family: "Workbench", monospace;
-        }
-
-        50% {
-          color: #de98e6;
-          font-family: "VT323", monospace;
-        }
-          
-        60%{
-          color: #faf0e7;
-          font-family: "Pirata One", fantasy;
-        }
-          
-        70%{
-          color: #faf0e7;
-          font-family: "Prata", serif;
-        }
-          
-        80%{
-          color: #de98e6;
-          font-family: "Gelasio", serif;
-        }
-          
-        90%{
-          color: #faf0e7;
-          font-family: "Instrument Serif", serif;
-        }
-      }
       
       /* For Computing Projects Section */
-      .cp-wrapper {
+      .cp-wrapper{
         position: relative;
-        height: 700px;
+        height: 600px;
       }
       
       .cp-bg{
@@ -610,10 +609,11 @@
       }
       
       .cp-content{
-        margin: auto;
         width: 1250px;
-        padding-top: 130px;
-        margin-left: 200px;
+        padding-top: 100px;
+        margin: 0px auto;
+        /* Nudging just a bit, looks off*/
+        transform: translateX(-50px);
       }
       
       .cp-content p{
