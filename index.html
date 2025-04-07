@@ -83,6 +83,18 @@
         width: fit-content;
       }
       
+      /* 
+        Code copied from: https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll
+        Author: omma2289
+        Name: DISABLE the Horizontal Scroll
+        Description: Stack overflow discussion to address the very annoying problem of my website having excess horizontal scroll space.
+        Date retrieved: April 6th 2025
+      */
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      
       /* For jump links */
       .jump-buffer {
         position: relative;
